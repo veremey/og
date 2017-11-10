@@ -1,0 +1,32 @@
+<div class="card card_{{#if mod}}{{./mod}}{{/if}}">
+  {{#each list}}
+    <div class="card__wrap">
+      {{#if title}}
+        <h4 class="card__title">{{title}}</h4>
+      {{/if}}
+      <ul class="card__list">
+
+        {{#each content}}
+          <li class="card__item">
+            <a href="#" class="card__link">
+
+              {{#if pic}}
+                <span class="card__pic">
+                  <img src="{{pic}}" class="card__img" alt="picture">
+                </span>
+                <span class="card__text">{{text}}</span>
+              {{else if text}}
+                <span class="card__pic card__pic_empty"></span>
+                <span class="card__text">{{text}}</span>
+              {{else}}
+                <span class="card__pic card__pic_add">
+                  {{Icon iconName='icon-plus' className='icon-plus'}}
+                </span>
+              {{/if}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/each}}
+</div>

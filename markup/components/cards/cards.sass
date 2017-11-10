@@ -1,0 +1,139 @@
+.card
+	position: relative
+	&__title
+		font-size: 12px
+		line-height: 2
+		color: #EAEAEA
+		+rr
+		font-weight: 500
+		margin-bottom: 12px
+	&__list
+		list-style: none
+		padding: 0
+		margin: 0
+		font-size: 0
+	&__pic
+		display: inline-block
+		position: relative
+		border-radius: 100%
+		font-size: 0
+		overflow: hidden
+	&__img
+		+vcenter
+		min-width: 100%
+		min-height: 100%
+
+	&_side &
+		&__wrap
+			padding: 12px 0 11px
+			border-top: 1px solid #595959
+		&__title
+			margin-left: 16px
+		&__item
+			min-height: 72px
+			&.is-active
+				.card__link
+					color: #303030
+					font-weight: bold
+					background-color: #FFD840
+		&__link
+			display: flex
+			align-items: center
+			padding: 12px 16px
+			font-size: 14px
+			line-height: 1.71
+			color: #fff
+			+rr
+			+tr(.4s)
+			&:hover
+				background-color: #FFD840
+				color: #303030
+				font-weight: bold
+		&__pic
+			display: inline-block
+			min-width: 48px
+			height: 48px
+			margin-right: 16px
+			&_empty
+				background-color: #FFF
+				opacity: .6
+	&_main &
+		&__wrap
+			display: flex
+			justify-content: space-between
+			border-top: 1px solid #E4E4E4
+			padding: 32px 0 32px 48px
+		&__title
+			position: relative
+			display: flex
+			flex: 0 1 auto
+			margin-right: 16px
+			white-space: nowrap
+			font-size: 14px
+			line-height: 1.71
+			color: #26BF8C
+			&:before
+				content: ''
+				position: absolute
+				top: .7em
+				left: -20px
+				display: inline-block
+				width: 12px
+				height: 9px
+				background-image: url("/static/img/minified-svg/icon-check.svg")
+				background-size: 12px 9px
+		&__list
+			display: flex
+			justify-content: flex-end
+			flex-wrap: wrap
+			margin-left: auto
+			width: 100%
+			max-width: 720px
+			// +r(1395)
+			// 	width: 540px
+		&__item
+			display: inline-block
+			vertical-align: top
+			margin-right: 16px
+		&__link
+			position: relative
+			display: flex
+			flex-direction: column
+			text-align: center
+			&:hover
+				opacity: 1
+				.card__pic
+					&:after
+						content: ''
+						+coverdiv
+						background-color: rgba(0, 0, 0, .1)
+					.icon-plus
+						fill: #2C2C2C
+		&__pic
+			display: block
+			width: 164px
+			height: 164px
+			margin-bottom: 4px
+			+r(1500)
+				width: 148px
+				height: 148px
+			+r(1401)
+				width: 164px
+				height: 164px
+			&_empty
+				background-image: url('../../static/img/content/main/placeholder.jpg')
+			&_add
+				background-color: #E3E3E3
+				margin: 0
+				opacity: .8
+				margin-bottom: 16px
+				+tr(.4s)
+			.icon-plus
+				+vcenter
+		&__img
+		&__text
+			margin-bottom: 28px
+			font-size: 14px
+			line-height: 1.71
+			color: #222
+

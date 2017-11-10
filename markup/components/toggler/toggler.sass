@@ -1,0 +1,64 @@
+.toggler
+	display: inline-block
+	&:focus
+		outline: 0
+		.toggler__btn
+			&:after
+				box-shadow: 0 0 0 4px rgba(255, 216, 64, .6)
+
+	&__checkbox
+		display: none
+		& + .toggler__btn
+			box-sizing: border-box
+			&::selection
+				background: none
+		&:checked + .toggler__btn:after
+			left: 50%
+
+		&:focus + .toggler__btn
+			&:after
+				box-shadow: 0 0 0 4px rgba(255, 216, 64, .6)
+
+		& + .toggler__btn
+			position: relative
+			outline: 0
+			display: block
+			width: 40px
+			height: 20px
+			cursor: pointer
+			user-select: none
+			border-radius: 100px
+			background-color: #F2F2F2
+			+tr(.4s)
+			&:after
+				content: ""
+				position: absolute
+				top: -2px
+				display: block
+				width: 24px
+				height: 24px
+				left: 0
+				border-radius: 24px
+				background-color: #fff
+				transition: left .3s cubic-bezier(0.175, 0.885, 0.320, 1.275), padding .3s ease, margin .3s ease
+				box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.2)
+
+			&:hover:after
+				will-change: padding
+
+			&:focus + .toggler__btn
+				&:after
+					box-shadow: 0 0 0 4px rgba(255, 216, 64, .6)
+
+			&:active
+				background-color: #E5E5E5
+				&:after
+					padding-right: .2em
+	&__checkbox
+		&:checked + .toggler__btn
+			background: #303030
+			&:active
+				background: #FCC31F
+				&:after
+					margin-left: -.2em
+

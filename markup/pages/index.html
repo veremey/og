@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="page__wrapper">
+
+            {{> aside/aside}}
+            {{> main/main}}
+
+            <div class="page__buffer"></div>
+
+        </div>
+
+        <script src="static/js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

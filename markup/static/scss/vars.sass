@@ -1,0 +1,52 @@
+// File for scss-vars.
+$n: transparent
+
+
+.logo
+	display: inline-block
+	vertical-align: top
+	margin: 0 0 0 19px
+	height: .9em
+	font-size: 18px
+	&__link
+		letter-spacing: .5px
+		font-size: 18px
+		color: #fff
+		+tr(.4s)
+		+rb
+		&:hover
+			color: #27BF8C
+			opacity: .8
+
+.btn
+	padding: 0
+	border: 0
+	margin: 0
+	font-size: 0
+
+.btn-menu
+	display: inline-block
+	vertical-align: top
+	background-color: $n
+	+tr(.4s)
+	&:hover
+		opacity: .8
+
+.btn-small
+	border-radius: 4px
+	padding: 6px 40px
+	background-color: rgba(255, 255, 255, 0.95)
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.1)
+	font-size: 14px
+	color: rgba(0, 0, 0, .9)
+	+rr
+	&:hover
+		background-color: rgba(255, 216, 64, .9)
+
+.icon-menu
+	display: inline-block
+	vertical-align: top
+	fill: $n
+
+.icon-plus
+	fill: #6F6F6F
